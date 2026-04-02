@@ -1,10 +1,36 @@
 /* ═══════════════════════════════════════════
+   PAGE LOADER
+   ═══════════════════════════════════════════ */
+window.addEventListener('load', () => {
+    const loader = document.getElementById('page-loader');
+    setTimeout(() => {
+        loader.classList.add('hidden');
+    }, 1500);
+});
+
+/* ═══════════════════════════════════════════
+   CURSOR GLOW (desktop only)
+   ═══════════════════════════════════════════ */
+const cursorGlow = document.getElementById('cursor-glow');
+if (window.matchMedia('(min-width: 769px)').matches && cursorGlow) {
+    document.addEventListener('mousemove', (e) => {
+        cursorGlow.style.left = e.clientX + 'px';
+        cursorGlow.style.top = e.clientY + 'px';
+        if (!cursorGlow.classList.contains('visible')) {
+            cursorGlow.classList.add('visible');
+        }
+    });
+    document.addEventListener('mouseleave', () => {
+        cursorGlow.classList.remove('visible');
+    });
+}
+
+/* ═══════════════════════════════════════════
    PARTICLE ANIMATION
    ═══════════════════════════════════════════ */
 const canvas = document.getElementById('particles-canvas');
 const ctx = canvas.getContext('2d');
 let particles = [];
-let animationId;
 
 function resizeCanvas() {
     const section = canvas.parentElement;
@@ -31,13 +57,9 @@ class Particle {
     update() {
         this.x += this.speedX;
         this.y += this.speedY;
-
-        // Pulse opacity
         this.opacity += this.fadeSpeed * this.fadeDir;
         if (this.opacity >= 0.5) this.fadeDir = -1;
         if (this.opacity <= 0.05) this.fadeDir = 1;
-
-        // Wrap around edges
         if (this.x < 0) this.x = canvas.width;
         if (this.x > canvas.width) this.x = 0;
         if (this.y < 0) this.y = canvas.height;
@@ -66,7 +88,6 @@ function drawConnections() {
             const dx = particles[i].x - particles[j].x;
             const dy = particles[i].y - particles[j].y;
             const dist = Math.sqrt(dx * dx + dy * dy);
-
             if (dist < 120) {
                 const opacity = (1 - dist / 120) * 0.08;
                 ctx.beginPath();
@@ -82,23 +103,15 @@ function drawConnections() {
 
 function animateParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
-        p.update();
-        p.draw();
-    });
+    particles.forEach(p => { p.update(); p.draw(); });
     drawConnections();
-    animationId = requestAnimationFrame(animateParticles);
+    requestAnimationFrame(animateParticles);
 }
 
-// Init particles
 resizeCanvas();
 initParticles();
 animateParticles();
-
-window.addEventListener('resize', () => {
-    resizeCanvas();
-    initParticles();
-});
+window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
 
 /* ═══════════════════════════════════════════
    NAVBAR — Toggle & Active Link
@@ -113,7 +126,6 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
-// Close menu when a nav link is clicked
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         menuIcon.classList.remove('bx-x');
@@ -158,6 +170,8 @@ ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact 
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 ScrollReveal().reveal('.achievement-item', { origin: 'bottom', interval: 80 });
+ScrollReveal().reveal('.stat-item', { origin: 'bottom', interval: 120 });
+ScrollReveal().reveal('.quote-section', { origin: 'bottom', distance: '30px' });
 
 /* ═══════════════════════════════════════════
    TYPED JS
@@ -218,11 +232,8 @@ form.addEventListener('submit', (e) => {
         })
         .catch((err) => {
             let errorMessage = 'حدث خطأ أثناء إرسال الرسالة. الرجاء المحاولة مرة أخرى.';
-            if (err && err.text) {
-                errorMessage = err.text;
-            } else if (err && err.message) {
-                errorMessage = err.message;
-            }
+            if (err && err.text) errorMessage = err.text;
+            else if (err && err.message) errorMessage = err.message;
             alert(errorMessage);
         });
 });
