@@ -963,8 +963,11 @@ section {
 
     .logo { font-size: 2rem; }
 
-    .home-content h1 { font-size: 4.5rem; }
-    .home-content h3 { font-size: 2rem; }
+    .home { padding-top: 6rem; }
+    .home-content h1 { font-size: 5.5rem; }
+    .home-content h3 { font-size: 2.4rem; }
+    .home-content h3:nth-of-type(2) { font-size: 3rem; }
+    .home-content .larger-text { font-size: 2.4rem; }
     .home-img img { width: 60vw; }
 
     .about-img img.second-image { width: 70vw; }
