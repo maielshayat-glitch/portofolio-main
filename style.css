@@ -4,13 +4,13 @@
    DESIGN TOKENS
    ═══════════════════════════════════════════ */
 :root {
-    --bg-primary: #0a0a1a;
-    --bg-secondary: #0f0f2a;
+    --bg-primary: #130f26;
+    --bg-secondary: #1a1532;
     --bg-card: rgba(255, 255, 255, 0.03);
     --bg-card-hover: rgba(255, 255, 255, 0.06);
     --text-primary: #f0f0f5;
     --text-secondary: rgba(240, 240, 245, 0.7);
-    --text-muted: rgba(240, 240, 245, 0.4);
+    --text-muted: rgba(240, 240, 245, 0.7);
     --accent-gold: #d4a853;
     --accent-gold-light: #e8c77b;
     --accent-gold-dark: #b8912e;
@@ -55,6 +55,7 @@ body {
     font-family: 'Inter', 'Cairo', sans-serif;
     direction: rtl;
     line-height: 1.6;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -153,19 +154,19 @@ section {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
+    background: rgba(19, 15, 38, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
     direction: ltr;
-    background: transparent;
+    z-index: 1000;
     transition: var(--transition-medium);
 }
 
 .header.sticky {
-    background: rgba(10, 10, 26, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(19, 15, 38, 0.95);
     border-bottom: 1px solid var(--glass-border);
     padding: 1.5rem 9%;
 }
@@ -275,12 +276,13 @@ section {
 .home-content h1 {
     font-size: 6.5rem;
     font-weight: 700;
-    line-height: 1.15;
+    line-height: 1.3;
     background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-gold) 50%, var(--accent-gold-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
     letter-spacing: -0.02em;
 }
 
@@ -811,7 +813,7 @@ section {
     align-items: center;
     flex-wrap: wrap;
     padding: 2.5rem 9%;
-    background: rgba(10, 10, 26, 0.95);
+    background: rgba(19, 15, 38, 0.95);
     border-top: 1px solid var(--glass-border);
 }
 
@@ -893,6 +895,7 @@ section {
     .home {
         flex-direction: column;
         text-align: center;
+        justify-content: center;
         gap: 3rem;
     }
 
@@ -941,7 +944,7 @@ section {
         left: 0;
         width: 100%;
         padding: 2rem 3%;
-        background: rgba(10, 10, 26, 0.95);
+        background: rgba(19, 15, 38, 0.95);
         backdrop-filter: blur(20px);
         border-top: 1px solid var(--glass-border);
         display: none;
@@ -957,6 +960,8 @@ section {
     }
 
     .navbar a::after { display: none; }
+
+    .logo { font-size: 2rem; }
 
     .home-content h1 { font-size: 4.5rem; }
     .home-content h3 { font-size: 2rem; }

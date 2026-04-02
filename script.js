@@ -167,11 +167,9 @@ ScrollReveal({
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom', interval: 100 });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'top', distance: '40px' });
+ScrollReveal().reveal('.home-content p, .about-content', { origin: 'bottom', distance: '40px' });
 ScrollReveal().reveal('.achievement-item', { origin: 'bottom', interval: 80 });
-ScrollReveal().reveal('.stat-item', { origin: 'bottom', interval: 120 });
-ScrollReveal().reveal('.quote-section', { origin: 'bottom', distance: '30px' });
 
 /* ═══════════════════════════════════════════
    TYPED JS
