@@ -175,7 +175,7 @@ ScrollReveal().reveal('.achievement-item', { origin: 'bottom', interval: 80 });
    TYPED JS
    ═══════════════════════════════════════════ */
 const typed = new Typed('.multiple-text', {
-    strings: ['Writer  كاتب', 'Novelist  روائي', 'Author  مؤلف'],
+    strings: ['صانع اثاث', 'Novelist  روائي', 'Author  مؤلف'],
     typeSpeed: 80,
     backSpeed: 60,
     backDelay: 1500,
