@@ -331,7 +331,6 @@ section {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(212, 168, 83, 0.3);
 }
-
 .home-img {
     position: relative;
     z-index: 1;
@@ -339,6 +338,8 @@ section {
 
 .home-img img {
     width: 30vw;
+    height: 30vw; /* ده التعديل بتاع الطول */
+    object-fit: cover; /* ده التعديل عشان الصورة متتمطش */
     border-radius: 50%;
     border: 3px solid rgba(212, 168, 83, 0.3);
     box-shadow:
