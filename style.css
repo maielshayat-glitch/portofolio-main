@@ -1032,3 +1032,66 @@ section {
     background: rgba(212, 168, 83, 0.3);
     color: var(--text-primary);
 }
+/* =========================================
+   تنسيقات معلومات التواصل (العنوان والواتساب)
+   ========================================= */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.contact-info p {
+    font-size: 1.6rem;
+    color: var(--text-primary); /* اتعدلت عشان تناسب موقعك */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-info i {
+    font-size: 2.2rem;
+    color: var(--accent-gold); /* اتعدلت عشان تناسب موقعك */
+}
+
+/* زرار الواتساب */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: #25D366; 
+    color: #fff;
+    padding: 1.2rem 2.8rem;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: var(--transition-medium);
+}
+
+.whatsapp-btn i {
+    font-size: 2.4rem;
+    color: #fff; 
+}
+
+.whatsapp-btn:hover {
+    background: #1ebc5a;
+    box-shadow: 0 0 1rem #25D366;
+    color: #fff;
+}
+
+/* تنسيق للريسبونسف (شاشات الموبايل) */
+@media (max-width: 768px) {
+    .contact-info p {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    
+    .whatsapp-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
