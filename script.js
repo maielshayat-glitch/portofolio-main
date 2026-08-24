@@ -175,7 +175,7 @@ ScrollReveal().reveal('.achievement-item', { origin: 'bottom', interval: 80 });
    TYPED JS
    ═══════════════════════════════════════════ */
 const typed = new Typed('.multiple-text', {
-    strings: ['نجار محترف', 'صانع أثاث', 'لمسة خشبية راقية'],
+    strings: ['نجار محترف', 'صانع أثاث', 'مصمم محترف'],
     typeSpeed: 80,
     backSpeed: 60,
     backDelay: 1500,
