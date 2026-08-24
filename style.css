@@ -1039,21 +1039,22 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    gap: 2rem; /* كبرنا المسافة دي شوية عشان تدي براح وشكل مريح للعين */
+    margin-bottom: 4rem;
 }
 
 .contact-info p {
     font-size: 1.6rem;
-    color: var(--text-primary); /* اتعدلت عشان تناسب موقعك */
+    color: var(--text-primary); 
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin: 0 !important; /* السطر ده هو السحر اللي هيلغي المسافة البايظة بتاعة الإيميل القديم */
 }
 
 .contact-info i {
     font-size: 2.2rem;
-    color: var(--accent-gold); /* اتعدلت عشان تناسب موقعك */
+    color: var(--accent-gold); 
 }
 
 /* زرار الواتساب */
