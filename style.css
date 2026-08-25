@@ -1117,3 +1117,60 @@ section {
     display: block !important;
     filter: none !important; /* لإلغاء أي تشويش أو بلور مفروض من القالب */
 }
+/* =========================================
+   تنسيقات قسم الخدمات (كروت احترافية)
+   ========================================= */
+.services-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 3rem !important;
+    margin-top: 4rem !important;
+    margin-bottom: 4rem !important;
+    width: 100% !important;
+}
+
+.service-box {
+    background: rgba(255, 255, 255, 0.03) !important; /* خلفية شفافة شيك زي الكارت */
+    padding: 4rem 2rem !important;
+    border-radius: 1.5rem !important;
+    text-align: center !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    transition: 0.3s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.service-box:hover {
+    transform: translateY(-10px) !important; /* الكارت بيترفع لفوق سِنة لما تقفي عليه */
+    background: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* تكبير الأيقونات وتظبيط مسافاتها */
+.service-box i {
+    font-size: 5rem !important; 
+    color: var(--accent-gold) !important;
+    margin-bottom: 2rem !important;
+}
+
+/* تظبيط العناوين جوه الكروت */
+.service-box h3 {
+    font-size: 2.2rem !important;
+    margin-bottom: 1.5rem !important;
+    color: #fff !important;
+}
+
+/* تظبيط الفونت والمسافات للكلام */
+.service-box p {
+    font-size: 1.5rem !important;
+    line-height: 1.8 !important;
+    color: #ccc !important;
+    margin: 0 !important;
+}
+
+/* سنترة الزرار اللي تحت */
+.service-btn-container {
+    text-align: center !important;
+    margin-top: 2rem !important;
+    width: 100% !important;
+}
