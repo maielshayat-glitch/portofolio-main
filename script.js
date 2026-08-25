@@ -222,7 +222,7 @@ const phonePattern = /^[0-9\+\s]{10,15}$/;
         message: message,
     };
 
-    emailjs.send('service_uz2xdka', 'template_jtfo0um', templateParams)
+    emailjs.send('service_uhf1n1p', 'template_ktj8rcu', templateParams)
         .then(() => {
             alert('تم إرسال الرسالة بنجاح!');
             form.reset();
