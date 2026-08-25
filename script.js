@@ -166,7 +166,7 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom', interval: 100 });
+ScrollReveal().reveal('.home-img, .service-box, .portfolio-box, .contact form', { origin: 'bottom', interval: 100 });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'top', distance: '40px' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'bottom', distance: '40px' });
 ScrollReveal().reveal('.achievement-item', { origin: 'bottom', interval: 80 });
