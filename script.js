@@ -208,8 +208,7 @@ form.addEventListener('submit', (e) => {
         alert('الرجاء إدخال بريد إلكتروني صحيح.');
         return;
     }
-
-    const phonePattern = /^\d{10,}$/;
+const phonePattern = /^[0-9\+\s]{10,15}$/;
     if (!phonePattern.test(phone)) {
         alert('الرجاء إدخال رقم هاتف صحيح (10 أرقام على الأقل).');
         return;
