@@ -1108,9 +1108,12 @@ section {
         margin-top: 10rem; /* بينزل المربعات لتحت سنة بسيطة عشان تتساوى مع العنوان بالمسطرة */
     }
 }
-/* تثبيت مقاس صور معرض الأعمال ليناسب صور الموبيليا */
+/* تظبيط نهائي وإجباري لجودة صور معرض الأعمال */
 .portfolio-box img {
-    width: 100%;
-    aspect-ratio: 4 / 3; /* غيرنا الرقم ده عشان يحافظ على جودة صورك بدون زوم مزعج */
-    object-fit: cover; 
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+    object-fit: cover !important;
+    display: block !important;
+    filter: none !important; /* لإلغاء أي تشويش أو بلور مفروض من القالب */
 }
