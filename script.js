@@ -185,8 +185,8 @@ const typed = new Typed('.multiple-text', {
 /* ═══════════════════════════════════════════
    EMAILJS — Contact Form
    ═══════════════════════════════════════════ */
-emailjs.init('8eakICxPhUTan-vnt');
 
+emailjs.init('Pc5tvs0-oZngXcHET');
 const form = document.getElementById('contact-form');
 
 form.addEventListener('submit', (e) => {
